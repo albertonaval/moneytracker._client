@@ -1,0 +1,36 @@
+/* General styling */
+
+#root {
+    min-height: max-content !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+.pageContainer {
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+}
+
+.textSecondary {
+    color: var(--color-primary)
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: var(--color-primary-interact)
+}

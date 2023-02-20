@@ -1,0 +1,48 @@
+.brand-link {
+    text-decoration: none !important;
+    color: var(--color-primary) !important;
+    font-weight: var(--button) !important;
+    font-size: var(--md) !important;
+    border-radius: 8px !important;
+}
+
+.nav-btn,
+.nav-link {
+    text-decoration: none;
+    color: var(--color-primary) !important;
+    font-weight: var(--button) !important;
+    font-size: var(--sm) !important;
+    display: block !important;
+    margin-inline: 16px;
+    margin-top: 2px !important;
+}
+
+.nav-btn:hover,
+.nav-link:hover {
+    background-color: var(--color-primary-interact) !important;
+    color: var(--bg-primary) !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 5px !important;
+    }
+
+    .nav-btn {
+        margin-top: 15px !important;
+        width: max-content;
+        padding-inline: 10px;
+    }
+
+    .navbar-collapse {
+        width: unset !important;
+        margin-top: 10px;
+        margin-inline: auto !important;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+}

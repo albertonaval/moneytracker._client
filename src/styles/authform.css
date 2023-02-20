@@ -1,0 +1,15 @@
+.form-control {
+    padding: 4px 8px !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-interact) !important;
+    border-color: transparent !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: var(--text-primary) !important;
+}
+
+.text-muted {
+    font-size: var(--xxs) !important;
+}

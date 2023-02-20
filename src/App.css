@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+@import "./styles/navbar.css";
+@import "./styles/authform.css";
+@import "./styles/transaction.css";
+@import "./styles/general.css";
+
+
+
+:root {
+  --bg-primary: #060606;
+  --bg-secondary: #272727;
+  --bg-interact: #373737;
+  --text-primary: #dbdbdb;
+  --text-secondary: #212529;
+  --text-terciary: #272727;
+
+  --color-primary: #098;
+  --color-primary-interact: rgb(1, 101, 89);
+  --color-secondary: rgb(153, 0, 56);
+
+  font-family: "Mukta", sans-serif !important;
+
+  --icon: calc(76px + (90 - 76) * ((100vw - 400px) / (1600 - 400)));
+  --timer: calc(16px + (36 - 16) * ((100vw - 600px) / (1600 - 600)));
+  --xxxxl: calc(52px + (68 - 52) * ((100vw - 400px) / (1600 - 400)));
+  --xxxl: calc(34px + (50 - 34) * ((100vw - 400px) / (1600 - 400)));
+  --xxl: calc(26px + (38 - 26) * ((100vw - 400px) / (1600 - 400)));
+  --xl: calc(20px + (30 - 20) * ((100vw - 400px) / (1600 - 400)));
+  --lg: calc(18px + (24 - 18) * ((100vw - 400px) / (1600 - 400)));
+  --md: calc(16px + (20 - 16) * ((100vw - 400px) / (1600 - 400)));
+  --st: calc(15px + (18 - 15) * ((100vw - 400px) / (1600 - 400)));
+  --sm: calc(14px + (16 - 14) * ((100vw - 400px) / (1600 - 400)));
+  --xs: calc(12px + (14 - 12) * ((100vw - 400px) / (1600 - 400)));
+  --xxs: calc(10px + (12 - 10) * ((100vw - 400px) / (1600 - 400)));
+  --xxxs: calc(9px + (10.5 - 9) * ((100vw - 400px) / (1600 - 400)));
+  --xxxxs: calc(7px + (8 - 7) * ((100vw - 400px) / (1600 - 400)));
+
+
+}

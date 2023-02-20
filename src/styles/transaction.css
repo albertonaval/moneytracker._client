@@ -1,0 +1,118 @@
+.titleGreen {
+    font-size: 2.5rem !important;
+    color: var(--color-primary) !important;
+}
+
+.title {
+    font-size: 2.5rem !important;
+    color: var(--color-secondary) !important;
+}
+
+.titleSpan {
+    font-size: .8rem;
+}
+
+.basic {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    width: 100%;
+    color: var(--text-secondary);
+}
+
+.inputOperation {
+    width: 100%;
+}
+
+.inputPrice {
+    width: 100%;
+}
+
+.description {
+    margin-top: 5px;
+    color: var(--text-secondary);
+    width: 100%;
+    text-align: justify;
+}
+
+.addButton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: var(--color-primary) !important;
+}
+
+.deleteButton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: var(--color-secondary) !important;
+}
+
+.transactions {
+    margin-top: 20px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 2px solid var(--text-secondary);
+}
+
+.transaction:first-child {
+    border-top: 0;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-align: justify;
+}
+
+.priceGreen {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    text-align: right;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    text-align: right;
+}
+
+.datetime {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.trashButton {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    position: absolute;
+    right: -5px;
+    padding: 10px 0px 10px 10px;
+}
+
+.searchInput {
+    padding: 4px 8px !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-interact) !important;
+    border: 1px solid var(--color-primary);
+    border-radius: .375rem;
+}
+
+.searchInput:focus {
+    padding: 4px 8px !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-interact) !important;
+    border: 1px solid var(--color-primary);
+    border-radius: .375rem;
+    outline: none;
+}
