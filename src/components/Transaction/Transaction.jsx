@@ -84,6 +84,7 @@ const Transaction = () => {
     }, [])
 
     let balance = 0
+    console.log(transactionData)
     transactionData.map((elm) =>
         balance += elm.transaction[0].price)
 
