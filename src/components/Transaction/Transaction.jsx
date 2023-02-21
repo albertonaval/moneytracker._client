@@ -86,13 +86,13 @@ const Transaction = () => {
     console.log("transaction", transactionData.transaction.price)
 
 
-    // let balance = 0
-    // transactionData.map((elm) =>
-    //     balance += elm.transaction[0].price)
+    let balance = 0
+    transactionData.map((elm) =>
+        balance += elm.transaction[0].price)
 
-    // balance = balance.toFixed(2)
-    // const fraction = balance.split('.')[1]
-    // balance = balance.split('.')[0]
+    balance = balance.toFixed(2)
+    const fraction = balance.split('.')[1]
+    balance = balance.split('.')[0]
 
 
     const { operation, price, description } = transactionDataInput
