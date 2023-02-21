@@ -33,7 +33,6 @@ const Transaction = () => {
         transactionServices
             .getTransactionByUser(user._id)
             .then(() => {
-                console.log(transactionDataInput)
                 return transactionServices.newTransaction(transactionDataInput)
             })
             .catch(err => console.log({ message: "Internal server error", err }))
@@ -84,12 +83,9 @@ const Transaction = () => {
         getTransactionByUser()
     }, [])
 
-    //console.table("transaction", transactionData[0])
-
-
     let balance = 0
-    // transactionData.map((elm) =>
-    //     balance += elm.transaction[0].price)
+    transactionData.map((elm) =>
+        balance += elm.transaction[0].price)
 
     balance = balance.toFixed(2)
     const fraction = balance.split('.')[1]
@@ -108,8 +104,6 @@ const Transaction = () => {
                         <i className="bi bi-piggy-bank-fill ml-3"></i>
                     </h1>
                     <input type="text" className="searchInput mt-2" placeholder="🔍" onChange={handleSearchInput} />
-
-
                     <Form onSubmit={() => handleFormSubmit()}>
                         <div className="basic">
                             <div className="inputOperation">
