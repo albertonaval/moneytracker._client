@@ -83,14 +83,16 @@ const Transaction = () => {
         getTransactionByUser()
     }, [])
 
-    let balance = 0
-    console.log(transactionData)
-    transactionData.map((elm) =>
-        balance += elm.transaction[0].price)
+    console.log("transaction", transactionData.transaction.price)
 
-    balance = balance.toFixed(2)
-    const fraction = balance.split('.')[1]
-    balance = balance.split('.')[0]
+
+    // let balance = 0
+    // transactionData.map((elm) =>
+    //     balance += elm.transaction[0].price)
+
+    // balance = balance.toFixed(2)
+    // const fraction = balance.split('.')[1]
+    // balance = balance.split('.')[0]
 
 
     const { operation, price, description } = transactionDataInput
@@ -105,6 +107,8 @@ const Transaction = () => {
                         <i className="bi bi-piggy-bank-fill ml-3"></i>
                     </h1>
                     <input type="text" className="searchInput mt-2" placeholder="🔍" onChange={handleSearchInput} />
+
+
                     <Form onSubmit={() => handleFormSubmit()}>
                         <div className="basic">
                             <div className="inputOperation">
