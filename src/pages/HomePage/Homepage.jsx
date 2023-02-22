@@ -23,7 +23,7 @@ const HomePage = () => {
                     <Row className="mt-5 pb-5 align-items-center justify-content-lg-end wow fadeInUp " data-wow-duration="2s">
                         <Col lg={{ span: 7 }} className="text-center">
                             <div className="d-flex my-5 pb-5">
-                                <img src="https://res.cloudinary.com/dqvwx536e/image/upload/v1675869713/undraw_digital_currency_qpak_dys0zn.svg" alt="Team" width="100%" />
+                                <img src="https://res.cloudinary.com/dqvwx536e/image/upload/v1677096937/undraw_mobile_payments_re_7udl_nhprf7.svg" alt="HomePage's Image" width="100%" />
                             </div>
                         </Col>
                         <Col lg={{ span: 5 }} className="text-center d-flex justify-content-lg-end justify-content-md-center pb-5 mb-5">
