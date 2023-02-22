@@ -1,15 +1,15 @@
-.titleGreen {
-    font-size: 2.5rem !important;
+.balanceGreen {
+    font-size: 3rem !important;
     color: var(--color-primary) !important;
 }
 
-.title {
-    font-size: 2.5rem !important;
+.balance {
+    font-size: 3rem !important;
     color: var(--color-secondary) !important;
 }
 
-.titleSpan {
-    font-size: .8rem;
+.balanceSpan {
+    font-size: 1.2rem !important;
 }
 
 .basic {
@@ -30,7 +30,7 @@
 
 .description {
     margin-top: 5px;
-    color: var(--text-secondary);
+    color: var(--bg-interact);
     width: 100%;
     text-align: justify;
 }
@@ -87,17 +87,18 @@
 }
 
 .datetime {
-    margin-top: 5px;
+    margin-top: 7px;
     font-size: 0.9rem;
     text-align: right;
+    color: var(--bg-interact)
 }
 
 .trashButton {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
+    font-size: 1.4rem;
+    color: var(--color-secondary);
     position: absolute;
     right: -5px;
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0px 15px 15px;
 }
 
 .searchInput {

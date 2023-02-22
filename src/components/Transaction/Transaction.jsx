@@ -117,9 +117,9 @@ const Transaction = () => {
         <>
             <main className="mt-5 p-3">
                 <section>
-                    <h1 className={balance < 0 ? "title" : "titleGreen"}>
+                    <h1 className={balance < 0 ? "balance" : "balanceGreen"}>
                         {balance}
-                        <span className="titleSpan">{fraction}</span>
+                        <span className="balanceSpan">{fraction}</span>
                         <i className="bi bi-piggy-bank-fill ml-3"></i>
                     </h1>
                     <input type="text" className="searchInput mt-2" placeholder="🔍" onChange={handleSearchInput} />
