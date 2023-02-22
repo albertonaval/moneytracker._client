@@ -27,17 +27,6 @@ const Transaction = () => {
         setTransactionDataInput({ ...transactionDataInput, [name]: value })
     }
 
-
-    // const handleFormSubmit = () => {
-
-    //     transactionServices
-    //         .getTransactionByUser(user._id)
-    //         .then(() => {
-    //             return transactionServices.newTransaction(transactionDataInput)
-    //         })
-    //         .catch(err => console.log({ message: "Internal server error", err }))
-    // }
-
     const handleFormSubmit = e => {
         e.preventDefault()
 
@@ -77,7 +66,7 @@ const Transaction = () => {
     const deleteAllTransaction = () => {
         transactionServices
             .deleteAllTransactions(user._id)
-            .then(res => setTransactionData(res.data))
+            .then(() => getTransactionByUser())
             .catch(err => console.log({ message: "Internal server error", err }))
     }
 
