@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import authServices from "../../services/auth.service"
 
-import toast from "react-hot-toast"
+//import toast from "react-hot-toast"
 
 
 const SignupForm = () => {
@@ -14,19 +14,6 @@ const SignupForm = () => {
         password: "",
     })
 
-    const notify = () =>
-        toast("Sign Up successful", {
-            icon: "💰",
-            position: 'top-center',
-            duration: 4000,
-            style: {
-                background: '#373737',
-                color: '#098',
-                border: '1px solid #098',
-                padding: '16px'
-            }
-
-        })
 
     const navigate = useNavigate()
     const [errors, setErrors] = useState([])
@@ -43,7 +30,7 @@ const SignupForm = () => {
         authServices
             .signup(signupData)
             .then(() => {
-                notify()
+                //notifySignUp()
                 navigate("/login")
             })
             .catch(err => setErrors(err.response.data.errorMessages))
@@ -88,3 +75,26 @@ const SignupForm = () => {
 }
 
 export default SignupForm
+
+
+
+
+
+// const notifySignUp = () =>
+//     toast("Sign Up successful", {
+//         icon: "💰",
+//         position: 'top-center',
+//         duration: 4000,
+//         style: {
+//             background: '#373737',
+//             color: '#098',
+//             border: '1px solid #098',
+//             padding: '16px'
+//         }
+
+//     })
+
+// const notifySignUp = () =>
+//     toast("Sign Up successful", {
+//         icon: "💜",
+//     })

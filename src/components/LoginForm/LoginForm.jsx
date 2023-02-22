@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap"
 import { AuthContext } from "../../context/auth.context"
 
 import authServices from "../../services/auth.service"
-import toast from "react-hot-toast"
+//import toast from "react-hot-toast"
 
 import { useNavigate } from "react-router-dom"
 
@@ -16,20 +16,6 @@ const LoginForm = () => {
         email: "",
         password: "",
     })
-
-    const notify = () =>
-        toast("Welcome", {
-            icon: "👋🏼",
-            position: 'top-center',
-            duration: 4000,
-            style: {
-                background: '#373737',
-                color: '#098',
-                border: '1px solid #098',
-                padding: '16px'
-            }
-
-        })
 
     const [errors, setErrors] = useState()
 
@@ -46,8 +32,8 @@ const LoginForm = () => {
             .then(({ data }) => {
                 storeToken(data.authToken)
                 authenticateUser()
-                notify()
                 navigate("/transaction")
+                //notifyLogIn()
             })
             .catch(err => setErrors(err.response.data.message))
     }
@@ -82,3 +68,11 @@ const LoginForm = () => {
 }
 
 export default LoginForm
+
+
+
+
+    // const notifyLogIn = () =>
+    //     toast("Welcome back", {
+    //         icon: "🎉",
+    //     })

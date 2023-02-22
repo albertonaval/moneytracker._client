@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react"
 
 import authService from "../services/auth.service"
 
-import toast from "react-hot-toast"
+//import toast from "react-hot-toast"
 
 const AuthContext = createContext()
 
@@ -10,15 +10,6 @@ const AuthProviderWrapper = props => {
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
 
-    const notifyLogIn = () =>
-        toast('Welcome to your house', {
-            icon: "🎉",
-        })
-
-    const notifyLogOut = () =>
-        toast("See you soon", {
-            icon: "👋🏼",
-        })
 
     const storeToken = token => {
         localStorage.setItem("authToken", token)
@@ -34,7 +25,6 @@ const AuthProviderWrapper = props => {
                 .then(({ data }) => {
                     setUser(data)
                     setIsLoading(false)
-                    notifyLogIn()
                 })
                 .catch(err => {
                     console.error("Internal Server Error", err)
@@ -46,7 +36,7 @@ const AuthProviderWrapper = props => {
     const logoutUser = () => {
         setUser(null)
         setIsLoading(false)
-        notifyLogOut()
+        //notifyLogOut()
         localStorage.removeItem("authToken")
     }
 
@@ -66,3 +56,11 @@ const AuthProviderWrapper = props => {
 }
 
 export { AuthContext, AuthProviderWrapper }
+
+
+
+
+// const notifyLogOut = () =>
+//     toast("See you soon", {
+//         icon: "👋🏼",
+//     })
