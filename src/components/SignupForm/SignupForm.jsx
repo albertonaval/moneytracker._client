@@ -1,7 +1,9 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import { Button, Form } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import authServices from "../../services/auth.service"
+
+import toast from "react-hot-toast"
 
 
 const SignupForm = () => {
