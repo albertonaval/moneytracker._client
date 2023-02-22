@@ -1,3 +1,12 @@
+# Check the live version here:
+https://m0neytracker.netlify.app/
+
+# The server code is live here:
+https://github.com/albertonaval/moneytracker._server
+
+# MoneyTracker:
+Moneytracker is an app had been developed under stack MERN where the user can organice your cash, your bills and what ever you want by adding different transactions or operations.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

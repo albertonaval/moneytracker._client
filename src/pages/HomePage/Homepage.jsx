@@ -30,7 +30,7 @@ const HomePage = () => {
                             <div className="text-start ">
                                 <h1 className="mt-5 textPrimary">Money Tracker</h1>
                                 <h4 className="pt-5 textSecondary">Be ready to save money</h4>
-                                <h4 className="textSecondary">Get ready to buy a new toys for you</h4>
+                                <h4 className="textSecondary">Get ready to buy your future caprice</h4>
                                 <p className="footer mt-3"> ©️ Developed by <a href="https://github.com/albertonaval">Alberto Naval</a></p>
                             </div>
                         </Col>
