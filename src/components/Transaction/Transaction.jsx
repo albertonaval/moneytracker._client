@@ -124,14 +124,13 @@ const Transaction = () => {
                     </h1>
                     <input type="text" className="searchInput mt-2" placeholder="🔍" onChange={handleSearchInput} />
                     <Form onSubmit={handleFormSubmit}>
-                        {/* <Form onSubmit={() => handleFormSubmit()}> */}
                         <div className="basic">
                             <div className="inputOperation">
                                 <Form.Group className="mb-3" controlId="operationname">
                                     <Form.Control className="form-contol" type="text" name="operation"
                                         value={operation}
                                         onChange={handleInputChange}
-                                        placeholder="Item"
+                                        placeholder="Transaction..."
                                     ></Form.Control>
                                 </Form.Group>
                             </div>
