@@ -16,6 +16,20 @@ const LoginForm = () => {
         password: "",
     })
 
+    const notify = () =>
+        toast("Welcome", {
+            icon: "👋🏼",
+            position: 'top-center',
+            duration: 4000,
+            style: {
+                background: '#373737',
+                color: '#098',
+                border: '1px solid #098',
+                padding: '16px'
+            }
+
+        })
+
     const [errors, setErrors] = useState()
 
     const handleInputChange = e => {
@@ -31,6 +45,7 @@ const LoginForm = () => {
             .then(({ data }) => {
                 storeToken(data.authToken)
                 authenticateUser()
+                notify()
                 navigate("/transaction")
             })
             .catch(err => setErrors(err.response.data.message))

@@ -12,6 +12,21 @@ const SignupForm = () => {
         password: "",
     })
 
+    const notify = () =>
+        toast("Sign Up successful", {
+            icon: "💰",
+            position: 'top-center',
+            duration: 4000,
+            style: {
+                background: '#373737',
+                color: '#098',
+                border: '1px solid #098',
+                padding: '16px'
+            }
+
+        })
+
+    const navigate = useNavigate()
     const [errors, setErrors] = useState([])
 
     const handleInputChange = e => {
@@ -19,14 +34,16 @@ const SignupForm = () => {
         setSignUpData({ ...signupData, [name]: value })
     }
 
-    const navigate = useNavigate()
 
     const handleFormSubmit = e => {
         e.preventDefault()
 
         authServices
             .signup(signupData)
-            .then(() => navigate("/login"))
+            .then(() => {
+                notify()
+                navigate("/login")
+            })
             .catch(err => setErrors(err.response.data.errorMessages))
     }
 
