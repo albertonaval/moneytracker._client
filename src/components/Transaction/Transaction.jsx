@@ -28,12 +28,31 @@ const Transaction = () => {
     }
 
 
-    const handleFormSubmit = () => {
+    // const handleFormSubmit = () => {
+
+    //     transactionServices
+    //         .getTransactionByUser(user._id)
+    //         .then(() => {
+    //             return transactionServices.newTransaction(transactionDataInput)
+    //         })
+    //         .catch(err => console.log({ message: "Internal server error", err }))
+    // }
+
+    const handleFormSubmit = e => {
+        e.preventDefault()
 
         transactionServices
             .getTransactionByUser(user._id)
             .then(() => {
                 return transactionServices.newTransaction(transactionDataInput)
+            })
+            .then(() => {
+                getTransactionByUser()
+                setTransactionDataInput({
+                    operation: "",
+                    price: "",
+                    description: ""
+                })
             })
             .catch(err => console.log({ message: "Internal server error", err }))
     }
@@ -104,7 +123,8 @@ const Transaction = () => {
                         <i className="bi bi-piggy-bank-fill ml-3"></i>
                     </h1>
                     <input type="text" className="searchInput mt-2" placeholder="🔍" onChange={handleSearchInput} />
-                    <Form onSubmit={() => handleFormSubmit()}>
+                    <Form onSubmit={handleFormSubmit}>
+                        {/* <Form onSubmit={() => handleFormSubmit()}> */}
                         <div className="basic">
                             <div className="inputOperation">
                                 <Form.Group className="mb-3" controlId="operationname">
