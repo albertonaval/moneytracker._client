@@ -17,10 +17,6 @@ const Transaction = () => {
     const [transactionDataCopy, setTransactionDataCopy] = useState([])
     const [transactionId, setTransactionId] = useState("")
 
-    // console.log("soy el original", transactionData)
-    // console.log("soy la copia =======>", transactionDataCopy)
-
-
     const handleInputChange = e => {
         const { value, name } = e.target
 
@@ -111,7 +107,7 @@ const Transaction = () => {
                         <span className="balanceSpan">{fraction}</span>
                         <i className="bi bi-piggy-bank-fill ml-3"></i>
                     </h1>
-                    <input type="text" className="searchInput mt-2" placeholder="🔍" onChange={handleSearchInput} />
+                    <input type="text" className="searchInput mt-2" placeholder="🔍 Search..." onChange={handleSearchInput} />
                     <Form onSubmit={handleFormSubmit}>
                         <div className="basic">
                             <div className="inputOperation">
@@ -119,16 +115,16 @@ const Transaction = () => {
                                     <Form.Control className="form-contol" type="text" name="operation"
                                         value={operation}
                                         onChange={handleInputChange}
-                                        placeholder="Transaction..."
+                                        placeholder="Transaction's name"
                                     ></Form.Control>
                                 </Form.Group>
                             </div>
                             <div className="inputPrice">
                                 <Form.Group className="mb-3" controlId="price">
-                                    <Form.Control className="form-contol" type="text" name="price"
+                                    <Form.Control className="form-contol" type="number" name="price"
                                         value={price}
                                         onChange={handleInputChange}
-                                        placeholder="+/-"
+                                        placeholder="0 €"
                                     ></Form.Control>
                                 </Form.Group>
                             </div>
@@ -138,7 +134,7 @@ const Transaction = () => {
                                 <Form.Control className="form-contol" type="text" name="description"
                                     value={description}
                                     onChange={handleInputChange}
-                                    placeholder="Description..."
+                                    placeholder="Transaction's description"
                                 ></Form.Control>
                             </Form.Group>
                         </div>
