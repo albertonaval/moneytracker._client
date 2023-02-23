@@ -78,8 +78,14 @@ const Transaction = () => {
         if (e.target.value === "") {
             setTransactionData(transactionDataCopy)
         } else {
-            const filteredTransactions = transactionDataCopy.filter(elm => elm.transaction[0].operation.toLowerCase().includes(e.target.value.toLowerCase()))
-            setTransactionData(filteredTransactions)
+            const filteredTransactionsByName = transactionDataCopy.filter(elm => elm.transaction[0].operation.toLowerCase().includes(e.target.value.toLowerCase()))
+            setTransactionData(filteredTransactionsByName)
+
+            // const filteredTransactionsByDescription = transactionDataCopy.filter(elm => console.log(elm.transaction[0]))
+
+            const filteredTransactionsByDescription = transactionDataCopy.filter(elm => elm.transaction[0].description.toLowerCase().includes(e.target.value.toLowerCase()))
+            setTransactionData(filteredTransactionsByDescription)
+
         }
     }
 
